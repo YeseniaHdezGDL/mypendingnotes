@@ -14,6 +14,14 @@
       </select>
     </div>
 
+    <div #status class="note-status">
+      <select id="status" name="status" id="priority" #mySelectStatus (change)="onChangeStatus(mySelectStatus.value)">
+        <option value="active">Activo</option>
+        <option value="done">Hecho</option>
+        <option value="delete">Borrar</option>
+      </select>
+    </div>
+
   </div>
 
 </div>

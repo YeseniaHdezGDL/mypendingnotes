@@ -28,6 +28,8 @@ export class NoteCardComponent implements OnInit {
     this.renderer.setAttribute(textarea, 'id', 'note');
     this.renderer.setValue(textarea, 'cdkDrag'); //////////////////////////
     this.renderer.setAttribute(textarea, 'class', 'cdk-drag');
+
+
   }
 
   onChange(deviceValue: string) {
@@ -38,7 +40,11 @@ export class NoteCardComponent implements OnInit {
       this.renderer.setStyle(this.priority.nativeElement, 'background-color', 'brown');
 
     }
-    
+}
+
+onChangeStatus(deviceValue: string) {
+  console.log(deviceValue);
+
 }
 
 }
