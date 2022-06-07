@@ -7,10 +7,10 @@
 
     <textarea id="note" >Este es un pendiente</textarea>
 
-    <div class="note-priority">
-      <select name="color" id="color">
-        <option value="r">Urgente</option>
-        <option value="a">No urgente</option>
+    <div #priority class="note-priority">
+      <select id="priority" name="priority" id="priority" #mySelect (change)="onChange(mySelect.value)">
+        <option value="urgente">Urgente</option>
+        <option value="nourgente">No urgente</option>
       </select>
     </div>
 

@@ -50,3 +50,7 @@
     background: linear-gradient(#F9EFAF, #F7E98D);
     box-shadow:0 4px 6px rgba(0,0,0,0.1);
   }
+
+  .note-priority {
+    background-color: brown;
+  }

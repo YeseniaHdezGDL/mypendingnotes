@@ -10,6 +10,8 @@ export class NoteCardComponent implements OnInit {
 
   @ViewChild('list')
   private list = {} as ElementRef;
+  @ViewChild('priority')
+  private priority = {} as ElementRef;
 
   constructor(
     private renderer: Renderer2
@@ -27,6 +29,11 @@ export class NoteCardComponent implements OnInit {
     this.renderer.setValue(textarea, 'cdkDrag'); //////////////////////////
     this.renderer.setAttribute(textarea, 'class', 'cdk-drag');
   }
+
+  onChange(deviceValue: string) {
+    console.log(deviceValue);
+    this.renderer.setStyle(this.priority.nativeElement, 'background-color', 'darkgreen');
+}
 
 }
 
