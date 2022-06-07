@@ -32,7 +32,13 @@ export class NoteCardComponent implements OnInit {
 
   onChange(deviceValue: string) {
     console.log(deviceValue);
-    this.renderer.setStyle(this.priority.nativeElement, 'background-color', 'darkgreen');
+    if (deviceValue == "nourgente") {
+      this.renderer.setStyle(this.priority.nativeElement, 'background-color', 'darkgreen');
+    } else {
+      this.renderer.setStyle(this.priority.nativeElement, 'background-color', 'brown');
+
+    }
+    
 }
 
 }
