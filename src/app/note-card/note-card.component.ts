@@ -12,9 +12,12 @@ export class NoteCardComponent implements OnInit {
   private list = {} as ElementRef;
   @ViewChild('priority')
   private priority = {} as ElementRef;
+  @ViewChild('notecont')
+  private notecont = {} as ElementRef;
 
   constructor(
-    private renderer: Renderer2
+    private renderer: Renderer2,
+    private elmRef: ElementRef
   ) { }
 
   ngOnInit(): void {
@@ -33,17 +36,17 @@ export class NoteCardComponent implements OnInit {
   }
 
   onChange(deviceValue: string) {
-    console.log(deviceValue);
     if (deviceValue == "nourgente") {
       this.renderer.setStyle(this.priority.nativeElement, 'background-color', 'darkgreen');
     } else {
       this.renderer.setStyle(this.priority.nativeElement, 'background-color', 'brown');
-
     }
 }
 
 onChangeStatus(deviceValue: string) {
-  console.log(deviceValue);
+  if (deviceValue == "done" || deviceValue == "delete") {
+    this.renderer.removeChild(this.list.nativeElement, this.notecont.nativeElement);
+  }
 
 }
 
