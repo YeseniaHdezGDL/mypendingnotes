@@ -6,7 +6,11 @@ import { AppComponent } from './app.component';
 import { MainLayoutComponent } from './pages/main-layout/main-layout.component';
 import { NoteCardComponent } from './note-card/note-card.component';
 
-import { MatFormFieldModule } from '@angular/material/form-field'; /////////////////////////////////////
+import { MatFormFieldModule } from '@angular/material/form-field';
+
+import { DragDropModule } from '@angular/cdk/drag-drop';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; /////////////////////////////////////
 
 @NgModule({
   declarations: [
@@ -17,7 +21,9 @@ import { MatFormFieldModule } from '@angular/material/form-field'; /////////////
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    BrowserAnimationsModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]

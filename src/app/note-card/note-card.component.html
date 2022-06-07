@@ -1,15 +1,21 @@
 
-
 <div id="create" (click)="newNote()">+</div> 
 
-<div #list id="noteList" class="note-container">
-    <textarea id="note">Este es un pendiente</textarea>
+<div #list id="noteList" class="note-list-container">
+
+  <div class="note-container">
+
+    <textarea id="note" cdkDrag>Este es un pendiente</textarea>
+
     <div class="note-priority">
       <select name="color" id="color">
         <option value="r">Urgente</option>
         <option value="a">No urgente</option>
       </select>
     </div>
+
+  </div>
+
 </div>
 
 

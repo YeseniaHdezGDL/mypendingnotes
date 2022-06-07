@@ -5,7 +5,7 @@
 #create, #note  { 
     float:left; 
     padding:25px 25px 40px;
-    margin:0 20px 20px 0;
+    margin:0 20px 20px 10px;
     width:250px;
     height:250px; 
   }
@@ -33,7 +33,6 @@
     box-shadow:0 4px 6px rgba(0,0,0,0.1);
     overflow:hidden;
     transition:box-shadow 0.5s ease;
-    font-smoothing:subpixel-antialiased;
     max-width:520px;
     max-height:250px;
   }
@@ -41,5 +40,9 @@
   #note:focus { box-shadow:0 5px 12px rgba(0,0,0,0.2); outline:none; }
 
   .note-container {
-    background-color: aquamarine;
+    background-color: blueviolet;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    flex-direction: column;
   }

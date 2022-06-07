@@ -1,4 +1,5 @@
 import { Component, OnInit, Renderer2, ViewChild, ElementRef } from '@angular/core';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-note-card',
@@ -23,6 +24,8 @@ export class NoteCardComponent implements OnInit {
     this.renderer.appendChild(textarea, text);
     this.renderer.appendChild(this.list.nativeElement, textarea);
     this.renderer.setAttribute(textarea, 'id', 'note');
+    this.renderer.setValue(textarea, 'cdkDrag'); //////////////////////////
+    this.renderer.setAttribute(textarea, 'class', 'cdk-drag');
   }
 
 }
